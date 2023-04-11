@@ -123,11 +123,6 @@ def game_data():
         'game_label': []
     }
     games = []
-    # games_type = [
-    #     'flavor=popularpurchased',
-    #     'flavor=contenthub_toprated&strFacetFilter={"type":2,"value":21}',
-    #     'https://store.steampowered.com/saleaction/ajaxgetsaledynamicappquery?cc=HK&l=english&clanAccountID=41316928&clanAnnouncementGID=3128313422564004283&flavor=contenthub_toprated&start=0&count=50&tabuniqueid=8&sectionuniqueid=13268&return_capsules=true&origin=https://store.steampowered.com&bForceUseSaleTag=true&strContentHubType=freetoplay&strTabFilter=&bRequestFacetCounts=true'
-    # ]
     games_type = [i for i in range(0, 2001, 100)]
     for name in games_type:
         games += get_games(name)
