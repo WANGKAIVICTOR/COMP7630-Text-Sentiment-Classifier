@@ -108,9 +108,9 @@ def get_comments_games(name):
     # print(res.text)
     pattern = r'</div>\s+(.*?)\s+</div>\s+</div>\s+<div class="UserReviewCardContent_Footer">'
     comments = re.findall(pattern, res.text)
-    if len(comments) > 0:
-        for i in range(len(comments)):
-            comments[i] = re.sub(r"[^a-zA-Z\s]+", '', comments[i])
+    # if len(comments) > 0:
+    #     for i in range(len(comments)):
+    #         comments[i] = re.sub(r"[^a-zA-Z\s]+", '', comments[i])
     pattern = r'<div class="title">(.+?)</div>'
     labels = re.findall(pattern, res.text)
     return comments, labels
@@ -130,7 +130,7 @@ def game_data():
     for i in range(len(games)):
         comments, labels = get_comments_games(games[i])
         if i % 100 == 0:
-            print(i, 'movies be processed')
+            print(i, 'games be processed')
         for j in range(len(comments)):
             infor_dict['game_name'].append(games[i])
             infor_dict['game_comment'].append(comments[j])
