@@ -142,5 +142,5 @@ def game_data():
 
 
 if __name__ == '__main__':
-    # movie_data()
+    movie_data()
     game_data()
